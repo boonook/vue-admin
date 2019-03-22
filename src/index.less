@@ -1,0 +1,265 @@
+@import '~iview/src/styles/index.less';
+
+@menu-dark-title: #001529;
+@menu-dark-active-bg: #000c17;
+@layout-sider-background: #001529;
+
+
+
+
+body{
+  background: #f0f0f0;
+  scrollbar-track-color: transparent
+}
+
+
+.pointer{
+  cursor: pointer;
+}
+
+.not-allowed{
+  cursor: not-allowed;
+}
+
+
+.readonly{
+  pointer-events: none;
+}
+
+
+.ml-s{
+  margin-left: 2px;
+}
+.ml-m{
+  margin-left: 8px;
+}
+
+.ml-l{
+  margin-left: 15px;
+}
+
+.search {
+  margin-bottom: 1rem;
+}
+
+.text-align-center{
+  text-align: center;
+}
+/* 可以设置不同的进入和离开动画 */
+/* 设置持续时间和动画函数 */
+.slide-fade-enter-active {
+  transition: all .2s ease;
+}
+.slide-fade-leave-active {
+  transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.ivu-table-expanded-cell{
+  padding:0 !important;
+}
+
+.custom-expand-row{
+    background: red;
+
+}
+
+.handel :hover{
+  //transform: scale(1.5,1.5);
+  font-size: 20px;
+}
+
+
+.scroll{
+  overflow: auto;
+  max-height: 60vh;
+}
+
+.ivu-date-picker .ivu-date-picker-focused{
+  .ivu-select-dropdown{
+    z-index: 10002;
+  }
+}
+
+.ivu-select-dropdown{
+  z-index: 10002;
+}
+
+.height-100{
+  height: 100%;
+  .ivu-card-body{
+    height: 100%;
+  }
+  .ivu-tabs-content{
+    height: 100%;
+    .ivu-tabs-tabpane{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+}
+.height-100-row{
+  height: 100%;
+  .ivu-card-body{
+    height: 100%;
+  }
+  .ivu-tabs-content{
+    height: 100%;
+    .ivu-tabs-tabpane{
+      height: 100%;
+      display: flex;
+      flex: 1;
+    }
+  }
+}
+
+.full-column{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.full-row{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.flex-full{
+  flex:1
+}
+.clear-flex{
+  flex: none !important;
+  overflow-y: scroll;
+
+  :first{
+    overflow-y:
+      scroll;
+    // ::-webkit-scrollbar{
+    //   background: none;
+    // }
+  }
+}
+
+
+
+.height-100-flex-column-scrolll{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  flex:1;
+
+}
+
+
+.height-100-flex-row-scrolll{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.flex-1{
+  display: flex;
+  flex:1
+}
+
+.flex{
+  display: flex;
+}
+.flex-1-scroll{
+  display: flex;
+  flex:1;
+  overflow-y: scroll;
+
+}
+
+.height-100-clear{
+  height: 100%;
+}
+
+.height-100-clear .ivu-card-body{
+  height: 100%;
+}
+
+
+
+
+
+/***************重要请仔细修改***************/
+
+
+.search {
+  margin-bottom: 1rem;
+}
+
+.ivu-tabs{
+  height: 100%;
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  .ivu-tabs-content{
+    flex:1;
+    .ivu-tabs-tabpane{
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.ivu-card{
+  height: 100%;
+  .ivu-card-body{
+    height: 100%;
+  }
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.column{
+  flex-direction: column;
+  display: flex;
+}
+
+.overflow-y-scroll{
+  overflow-y: auto;
+}
+
+.overflow-x-hidden{
+  overflow-x: hidden
+}
+.overflow-y-hidden{
+  overflow-y: hidden
+}
+
+.overflow-none{
+  overflow: initial
+}
+
+.relative{
+  position: relative;
+}
+
+.absolute{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.hide-scrollbar::-webkit-scrollbar{
+    background: transparent;
+
+}
+
+.sys-menu-icon{
+  color: #fff
+}
+
