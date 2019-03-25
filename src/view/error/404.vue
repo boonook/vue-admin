@@ -1,11 +1,11 @@
 <template>
-    <div class="404">
+    <div class="not_found">
         <h1>404</h1>
     </div>
 </template>
 <script>
     export default {
-        name: "404",
+        name: "not_found",
         ///跨组件属性
         inject: [],
         ///子组件

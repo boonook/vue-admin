@@ -1,6 +1,8 @@
 <template>
     <div class="home">
-        <h1>home</h1>
+        <Card>
+            <h1>home</h1>
+        </Card>
     </div>
 </template>
 <script>
@@ -49,5 +51,6 @@
 
 <style scoped>
     .home {
+
     }
 </style>

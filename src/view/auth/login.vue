@@ -1,35 +1,26 @@
 <template>
     <div :class="['bg','animated','fadeInDown']" :style="{backgroundImage:`url('${bg}')`}">
       <div class="container">
-          <Row class='header'>
-               <i-col :lg="{ span: 12, offset: 6 }" :xs="{ span: 20, offset: 2 }" class="logo"> 
-                    <img src='../../assets/images/logo.png'>
-               </i-col>
-          </Row>
-          <Row class="main">
-              <i-col :lg="{ span: 8, offset: 8 }" :xs="{ span: 20, offset: 2 }">
-                  <div class="login-box">
-                      <Form class="form" :model='formData'>
-                           <FormItem prop="username">
-                                <Input type="text"  placeholder="同户名" class="form-item" size="large" v-model="formData.username">
-                                    <Icon type="ios-person-outline" slot="prepend" color="#fff" size="20"></Icon>
-                                </Input>
-                            </FormItem>
-                            <FormItem prop="password">
-                                <Input type="password"  placeholder="密码" class="form-item" size="large" v-model="formData.password">
-                                    <Icon type="ios-lock-outline" slot="prepend" color="#fff" size="20"></Icon>
-                                </Input>
-                            </FormItem>
-                            <FormItem prop='remember'>
-                                <Checkbox class="form-item" v-model="formData.remember">记住密码</Checkbox>
-                            </FormItem>
-                      </Form>
-                      <footer class="login-btn">
-                            <Button type="success" @click="_onClickLogin">登录</Button>
-                      </footer>
-                  </div>
-              </i-col>
-          </Row>
+         <Card style="width:300px;">
+             <Form class="form" :model='formData'>
+                 <FormItem prop="username">
+                     <Input type="text"  placeholder="同户名" class="form-item" size="large" v-model="formData.username">
+                     <Icon type="ios-person-outline" slot="prepend" color="#fff" size="20"></Icon>
+                     </Input>
+                 </FormItem>
+                 <FormItem prop="password">
+                     <Input type="password"  placeholder="密码" class="form-item" size="large" v-model="formData.password">
+                     <Icon type="ios-lock-outline" slot="prepend" color="#fff" size="20"></Icon>
+                     </Input>
+                 </FormItem>
+                 <FormItem prop='remember'>
+                     <Checkbox class="form-item" v-model="formData.remember">记住密码</Checkbox>
+                 </FormItem>
+             </Form>
+             <footer class="login-btn">
+                 <Button type="success" @click="_onClickLogin">登录</Button>
+             </footer>
+         </Card>
       </div>
     </div>
 </template>
@@ -62,7 +53,8 @@ export default Vue.extend({
         _onClickLogin(){
             this.login().then(res=>{
                  this.$router.push({
-                    name: 'index'
+//                    name: 'index'
+                     name: 'grid_manager'
                 })
             })
         }
@@ -85,14 +77,19 @@ export default Vue.extend({
 
 <style scoped>
 .bg{ width: 100%; height: 100%;background-size: cover;background-repeat: no-repeat;position: relative;transition: all .5s;overflow: hidden;}
-.container{position:absolute;left: 0;right: 0;top: 0;bottom: 0;}
+.container{
+    display: flex;
+    height: 100%;
+    width:100%;
+    flex-direction: column;  /* 子元素横向排列 */
+    justify-content:center;
+    align-items:center
+}
 .animated{animation-duration: 1s;animation-fill-mode: both;}
 .fadeInDown{animation-name: fadeInDown;}
 @keyframes fadeInDown {0%{opacity: 0;}100%{opacity: 1;}}
 .logo{padding-top: 5%;}
 .logo img{width:100%;}
-.main{ padding: 0; padding-bottom: 1rem; min-height: 5rem;position: relative;margin-top: 0.2rem;}
-.main .row{margin-left: -1rem;margin-right: -1rem;}
 
 .login-box{background-color: rgba(0,0,0,.6);border-radius: 0.05rem;}
 .login-box .form{padding: 0.3rem 0.3rem 0 0.3rem;}

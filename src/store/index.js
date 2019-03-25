@@ -18,7 +18,7 @@ const store = new Vuex.Store({
     actions: {
         // 异步方法
         login({commit,dispatch,rootState}){
-            commit('setLogin',true)
+            commit('setLogin',true);
             return Promise.resolve(true)
         },
         logout({commit}){
